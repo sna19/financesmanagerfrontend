@@ -1,0 +1,19 @@
+
+
+
+
+<table class="categoryDetails" id="categoryDetails" style="border-style: double;">
+	<tr><th align=right>Parent Category</th>
+		<td><select 
+            name="categorySelect" 
+            id="categorySelect" 
+            ng-model="category.selected"
+            ng-options="option.CategoryName for option in category.data">
+        </select></td></tr>
+   	<tr><th align=right>Name:</th>
+		<td><input id="Label" type="text" ng-model="category.name"></Input></td>
+	</tr>
+
+    <tr><td></td><td><input id="mappingApply" name="mappingApply" type="button" ng-click="saveCategory()" value="Apply"></input></td></tr>
+
+</table>

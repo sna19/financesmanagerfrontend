@@ -1,0 +1,54 @@
+
+
+
+
+<table class="expenseDetails" id="expenseDetails" style="border-style: double;">
+	<colgroup><col align="right"></col><col align="left"></col></colgroup>
+	<tr><th colspan="2"><h3>Expense Details</h3></th></tr>
+	<tr class="readonlyFormField"><th align=right>Is Expense Updated:</th>
+		<td><input type="text" lass="readonlyFormField" readonly ng-model="isExpenseUpdated" value=""></input><td></tr>
+	<tr class="readonlyFormField"><th align=right>Signature:</th>
+		<td><input type="text" readonly ng-model="expense.UniqueKey" value=""></input><td></tr>
+	<tr><th align=right>Date:</th>
+		<td><input type="text" ng-model="date" ng-change="onFieldChanged(this)" value=""></input><td></tr>
+	<tr><th align=right>Name:</th>
+		<td><input id="Expense" type="text" ng-model="expense.Name" ng-change="onFieldChanged(this)"></Input><td></tr>
+    <tr><th align=right>Charge Date:</th>
+		<td><select  
+            id="chargeDateSelect" 
+            ng-model="chargeDates.selected"	
+            ng-change="onFieldChanged(this)"
+            ng-options="option.name for option in chargeDates.data">
+        </select></td></tr>
+    
+    <tr><th align=right>Payment Type:</th>
+		<td><select  
+            id="paymentTypeSelect" 
+            ng-model="paymentTypes.selected"
+            ng-change="onFieldChanged(this)"
+            ng-options="option.name for option in paymentTypes.data">
+        </select></td></tr>
+	<tr><th align=right>Notes:</th>
+			<td><input id="Notes" type="text" ng-model="expense.Notes"></Input></td></tr>        
+	<tr><th align=right>Label:</th>
+		<td><input id="Label" type="text" ng-model="expense.Label" ng-change="onFieldChanged(this)"></Input></td></tr>
+	
+
+	<tr><th colspan="2">Global Configuration</th></tr>
+	<tr><th align=right>Credit:</th>
+		<td><input id="Expense" type="text" ng-model="expense.Credit" ng-change="onFieldChanged(this)"></Input><td></tr>
+	<tr class="readonlyFormField"><th align=right>Old Category ID:</th>
+		<td><input type="text" readonly ng-model="categories.oldCategoryID" value=""></input><td></tr>
+	<tr><th align=right class="readonlyFormField">Category ID:</th>
+		<td><input type="text" readonly ng-model="categories.selected.CategoryID" value=""></input><td></tr>
+	<tr><th align=right>Category:</th>
+		<td><select 
+            name="categoriesSelect" 
+            id="categoriesSelect" 
+            ng-model="categories.selected"
+            ng-options="option.CategoryName for option in categories.data">
+        </select></td></tr>	
+
+    <tr><td></td><td><input id="mappingApply" name="mappingApply" type="button" ng-click="applyMappingChange()" value="Apply"></input></td></tr>
+
+</table>

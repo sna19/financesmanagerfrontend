@@ -1,0 +1,14 @@
+
+
+
+    <!-- Credit Card Select -->
+    <div id="creditCardSelector" class="creditCardSelector">
+	    <label for="creditCardSelect"> Credit Card: </label>
+	    <select 
+	        name="creditCardSelect" 
+	        id="creditCardSelect" 
+	        ng-model="creditCardsData.selected" 
+	        ng-change="onCreditCardChanged(creditCardsData)">
+	              <option ng-repeat="option in creditCardsData.availableOptions" value="{{option.id}}">{{option.name}}</option>
+	    </select>
+    </div>

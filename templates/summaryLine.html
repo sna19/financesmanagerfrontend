@@ -1,0 +1,17 @@
+
+
+  <div id="summaryLine" class="summaryLine">
+    <table>
+      <tr ng-model="summaryLine">
+        <td><b>Incomes:</b></td>
+        <td><label data-ng-bind="summaryLine.TotalIncomes"></label></td>
+        <td><b>Expenses:</b></td>
+        <td><label data-ng-bind="summaryLine.TotalExpenses"></label></td>
+        
+        <td ng-click="onItemClick('Start')" style="cursor: hand"><b>Start(By Bank):</b></td>
+        <td><label ng-click="onItemClick('Start')" data-ng-bind="summaryLine.MonthStart"></label></td> 
+        <td ng-click="onItemClick('End')" style="cursor: hand"><b>Ends(By Bank):</b></td>
+        <td><label ng-click="onItemClick('End')" data-ng-bind="summaryLine.EndMonth"></label></td>
+      </tr>
+    </table>
+  </div>

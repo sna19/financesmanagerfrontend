@@ -1,0 +1,158 @@
+
+
+
+<!doctype html>
+<html ng-app="app">
+  <head>
+
+      <meta charset="UTF-8" />
+
+    <!-- Angular Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css"></link>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <!-- d3 -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="scripts/gradientPie.js"></script>
+
+
+    
+    <script src="scripts/ui-grid/ui-grid.js"></script>
+    <link rel='stylesheet' type='text/css' href='scripts/ui-grid/ui-grid.css'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+
+
+    <script src="app.js"></script>
+    <script src="factories/widgetMgr.js"></script>
+    <script src="factories/globalData.js"></script>
+    <script src="factories/state.js"></script>
+
+    <script src="controllers/summaryGridTypeSelector.js"></script>
+    <script src="controllers/summaryLine.js"></script>
+    <script src="controllers/summary.js"></script>
+    <script src="controllers/summaryTree.js"></script>
+    <script src="controllers/summaryMenu.js"></script>
+    <script src="controllers/chargeDate.js"></script>
+    <script src="controllers/creditCard.js"></script>
+    <script src="controllers/expensesList.js"></script>
+    <script src="controllers/expensesMenu.js"></script>
+    <script src="controllers/expense.js"></script>
+    <script src="controllers/topMenu.js"></script>
+    <script src="controllers/operations.js"></script>
+    <script src="controllers/mapping.js"></script>
+    <script src="controllers/generateSummary.js"></script>
+    <script src="controllers/historyByCategory.js"></script>
+    <script src="controllers/category.js"></script>
+    <script src="controllers/pie.js"></script>
+    <script src="controllers/genericGrid.js"></script>
+
+    <script src="controllers/yearSummary.js"></script>
+
+    <script src="components/menu.js"></script>
+    <script src="components/grid.js"></script>
+    
+  </head>
+
+  <body ng-controller="MainCtrl">
+
+      <!--
+      <div ng-controller="ExpensesController as c">
+        <menu itemlist="c.menuList"></menu>
+      </div>
+      -->
+
+      <div flex="100" layout="column">
+        <div flex=10  class="topPanel">
+          <div ng-controller="TopMenuController" ng-include="'templates/topMenu.html'"></div>
+        </div>
+        
+        <!-- Filters Area (Date) -->
+        <div class="filterPanel">
+          <!-- Charge Date Select -->
+           
+           <div ng-controller="SummaryGridTypeSelectorController" ng-include="'templates/summaryGridTypeSelector.html'"></div>
+
+           <div ng-controller="ChargeDateController" ng-include="'templates/chargeDateSelector.html'"></div>
+
+          <!-- Charge Date Select -->
+           <div ng-controller="CreditCardController" ng-include="'templates/creditCardSelector.html'"></div>
+
+          <!-- Generate Summary -->
+           <div ng-controller="GenerateSummaryController" ng-include="'templates/generateSummary.html'"></div>
+
+           <a ng-controller="OperationsController" id="addNewButton" href="#" class="linkButton" ng-click="onNewButtonClicked()">New</a> 
+        </div>
+
+        <!-- Main Area (Sumamry Tables) -->
+        <div  class="mainPanel">
+
+          <div>
+            
+            <div ng-controller="SummaryLineController" ng-include="'templates/summaryLine.html'"></div>
+
+            <!-- Summary Grid via template-->
+            <div>
+              <div ng-controller="SummaryController" ng-include="'templates/summary.html'"></div>
+            </div>      
+
+            <!-- Summary Tree via template-->
+            <div>
+              <div ng-controller="SummaryTreeController" ng-include="'templates/summaryTree.html'"></div>
+            </div>
+
+            <div id="summaryByCreditCards" ng-controller="SummaryController as ctrl" style="visibility: hidden; display: none;">
+              <grid label="Distributionb by Credit Cards" griddata="ctrl.creditcardsdata" gridwidth=300 gridheight=400></grid>
+            </div>
+
+            <div id="yearSummary" ng-controller="YearSummaryController as ctrl" style="visibility: hidden; display: none;">
+              <grid label="Yearly Report" griddata="ctrl.yearsummarydata" gridwidth=1200 gridheight=500></grid>
+            </div>
+
+            <!-- Dynamic Grid -->
+            <!--
+              <div ng-controller="GenericGrid" gridType="TasksList" ng-include="'templates/summary.html'">
+                <div dir='rtl' ui-grid-selection ui-grid="gridOptions" class="gridClass"></div>
+              </div>
+            -->
+
+            <!--
+            <div>
+              <div ng-controller="PieController" ng-include="'templates/pie.html'"></div>
+            </div>            
+            -->
+
+             <!-- Summary Menu-->
+            <div ng-controller="SummaryMenuController" ng-include="'templates/summaryMenu.html'" class="summaryMenu" id='summaryMenu'></div>
+
+            <div ng-controller="CategoryController" ng-include="'templates/categoryForm.html'"></div>
+
+             <!-- History by Category Grid -->
+             <div ng-controller="HistoryByCategoryController" ng-include="'templates/historyByCategory.html'"></div>
+            
+
+            <!-- Expenses Grid (By Summary Selected) -->
+            
+            <div ng-controller="ExpensesController" ng-include="'templates/expensesList.html'"></div>
+
+             <!-- Expenses Menu-->
+            <div ng-controller="ExpensesMenuController" ng-include="'templates/expensesMenu.html'" class="expensesMenu" id='expensesMenu'></div>
+
+            <div ng-controller="ExpenseController" ng-include="'templates/expenseForm.html'"></div>
+
+            <div ng-controller="MappingController" ng-include="'templates/mappingForm.html'"></div>
+
+          </div>
+
+        <!--</div>
+        <div flex=10  class="bottomPanel">  Bottom Panel</div>-->
+      </div>
+
+  </body>
+</html>

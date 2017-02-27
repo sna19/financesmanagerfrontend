@@ -1,0 +1,217 @@
+
+.widget {
+  display:inline-block;
+  padding: 4px 8px;
+}
+
+.chargeDateSelector {
+  display:inline-block;
+  
+  margin-right: 10px;
+  visibility: hidden;
+}
+
+.generateSummary {
+  display:inline-block;
+  margin-right: 10px;
+  visibility: hidden;
+}
+
+.creditCardSelector {
+  display:inline-block;
+  
+  margin-right: 10px;
+  visibility: hidden;
+}
+
+.summaryGrid {
+  width: 400px;
+  height: 500px;
+  font-size: 8pt;
+  visibility: hidden;
+  display: none;
+  padding: 4px 8px;
+  float:left;
+}
+
+.summaryTree {
+  width: 600px;
+  height: 500px;
+  font-size: 8pt;
+  visibility: hidden;
+  display: none;
+  padding: 4px 8px;
+  float:left;
+}
+
+.historyByCategoryGrid {
+  width: 400px;
+  height: 500px;
+  font-size: 8pt;
+  visibility: hidden;
+  display: none;
+  padding: 4px 8px;
+  float:left;
+}
+
+.summaryLine {
+  visibility: hidden;
+  display: none;
+}
+
+.summaryGridTypeSelector {
+  visibility: hidden;
+  display: none;
+}
+
+input {
+  width: 350px;
+}
+
+.summaryMenu {
+  visibility: hidden;
+  display: none;
+  padding: 4px 8px;
+  float:left;
+}
+
+.pie {
+  visibility: hidden;
+  display: none;
+  padding: 4px 8px;
+  float:left;
+}
+
+.gridSummaryExpenses {
+	  width: 400px;
+	  height: 500px;
+    visibility: hidden;
+    font-size: 8pt;
+    display: none;
+    padding: 4px 8px;
+    float:left;
+}
+
+.expensesMenu {
+  visibility: hidden;
+  display: none;
+  padding: 4px 8px;
+  float:left;
+}
+
+.expenseDetails {
+    visibility: hidden;
+    display:  none;
+    padding: 4px 8px;
+    float:left;
+    width: 550px;
+}
+
+.categoryDetails {
+    visibility: hidden;
+    display: none;
+    padding: 4px 8px;
+    float:left;
+    width: 550px;
+}
+
+
+.mappingDetails {
+    visibility: hidden;
+    display: none;
+    padding: 4px 8px;
+    float:left;
+    width: 550px;
+}
+
+.topPanel {
+	
+}
+
+.linkButton {
+  display: none;
+}
+
+.filterPanel {
+	width: 200%;
+  background-color: yellow;
+}
+
+.mainPanel {
+  width: 1000%;	
+}
+
+.bottomPanel {
+	
+}
+
+#formHeader {
+	align: right;
+}
+
+.readonlyFormField {
+  color: #DCDCDC;
+}
+
+
+.demo-md-panel {
+  min-height: 500px;
+}
+
+.demo-dialog-example {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
+      0 13px 19px 2px rgba(0, 0, 0, 0.14),
+      0 5px 24px 4px rgba(0, 0, 0, 0.12);
+  width: 500px;
+}
+
+.demo-dialog-content {
+  padding: 0 15px;
+  width: 100%;
+}
+
+.demo-dialog-content img {
+  height: 300px;
+  margin: auto;
+}
+
+.demo-dialog-button {
+  width: 100%;
+}
+
+.demo-menu-example {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
+      0 13px 19px 2px rgba(0, 0, 0, 0.14),
+      0 5px 24px 4px rgba(0, 0, 0, 0.12);
+  width: 256px;
+}
+
+.demo-menu-item {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  padding: 0 16px;
+  position: relative;
+  transition: background 0.15s linear;
+  width: auto;
+}
+
+.demo-menu-item:hover,
+.demo-menu-item:focus {
+  background-color: rgb(238, 238, 238);
+}
+
+.demo-menu-item.selected {
+  color: rgb(16, 108, 200);
+}
+
+
+.topMenuButton: {
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}

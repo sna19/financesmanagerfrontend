@@ -1,0 +1,23 @@
+
+
+
+
+<table class="mappingDetails" id="mappingDetails" style="border-style: double;">
+	<colgroup><col align="right"></col><col align="left"></col></colgroup>
+	<tr><th colspan="2"><h3>Mapping Expense to Category:</h3></th></tr>
+
+	<tr><th align=right>Name:</th>
+		<td><input id="Name" type="text" ng-model="expense.Name"></Input><td></tr>
+	<tr><th align=right>Category:</th>
+		<td><select 
+            name="categoriesSelect" 
+            id="categoriesSelect" 
+            ng-model="categories.selected"
+            ng-options="option.CategoryName for option in categories.data">
+        </select></td></tr>	
+	<tr><th align=right>Label:</th>
+		<td><input id="Label" type="text" ng-model="expense.Label"></Input><td></tr>
+
+    <tr><td></td><td><input id="mappingApply" name="mappingApply" type="button" ng-click="applyMappingChange()" value="Apply"></input></td></tr>
+
+</table>

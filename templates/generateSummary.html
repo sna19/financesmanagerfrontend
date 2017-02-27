@@ -1,0 +1,15 @@
+
+
+
+    <!-- Charge Date Select -->
+    <div id="generateSummary" class="generateSummary">
+	    <label for="chargeDateSelect"> Charge Date:  </label>
+	    <select 
+	        name="chargeDateSelect" 
+	        id="chargeDateSelect" 
+	        ng-model="chargeDatesData.selected" 
+	        ng-change="onChargeDateChanged(chargeDatesData)">
+	              <option ng-repeat="option in chargeDatesData.availableOptions" value="{{option.id}}">{{option.name}}</option>
+	    </select>
+	    <input type="button" ng-click="onGenerateSummaryClicked()" value="Generate"></input>
+    </div>

@@ -1,0 +1,17 @@
+
+
+
+    <!-- Charge Grod Type Select -->
+    <div id="summaryGridTypeSelector" class="summaryGridTypeSelector">
+	    <label for="summaryGridTypeSelector">Show summary as:  </label>
+	    <select 
+	        name="summaryGridTypeSelect" 
+	        id="summaryGridTypeSelect" 
+	        ng-model="summaryGridType.selected" 
+	        ng-change="onSummaryGridTypeChanged(summaryGridType.selected)">
+	              	<option value="flat">Flat List</option>
+	              <option value="tree">Tree</option>
+	    </select>
+    </div>
+
+
